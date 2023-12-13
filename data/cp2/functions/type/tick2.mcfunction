@@ -36,6 +36,7 @@ execute at @e[type=marker,tag=mid] run setworldspawn ~ ~ ~
 execute as @a[gamemode=creative,tag=!admin] run function cp2:type/work/ui/admin/become_admin
 execute as @a[tag=admin,scores={admin.page=1}] run function cp2:type/work/ui/admin/click
 execute as @a[tag=admin,scores={admin.page=2}] run function cp2:type/work/ui/admin/page2/click
+execute as @a[tag=admin,scores={admin.page=3}] run function cp2:type/work/ui/admin/page3/click
 clear @a[tag=!admin] #cp2:all{clear:1b}
 
 

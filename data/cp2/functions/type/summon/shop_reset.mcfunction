@@ -10,5 +10,7 @@ execute as @e[type=marker,tag=shop_build] at @s run function cp2:type/summon/sho
 execute as @e[type=marker,tag=shop_armor] at @s run function cp2:type/summon/shop_armor
 execute as @e[type=marker,tag=shop_enchanter] at @s run function cp2:type/summon/shop_enchanter
 execute as @e[type=marker,tag=shop_scientist] at @s run function cp2:type/summon/shop_scientist
+execute as @e[type=marker,tag=shop_engineer] at @s run function cp2:type/summon/shop_engineer
+execute as @e[type=marker,tag=shop_brewer] at @s run function cp2:type/summon/shop_brewer
 
 

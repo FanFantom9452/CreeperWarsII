@@ -10,8 +10,9 @@ execute if entity @s[tag=spawn_cd_point] run effect give @a[scores={death_CD=1..
 execute if entity @s[tag=spawn_cd_point] as @a[scores={death_CD=0},distance=..5,gamemode=adventure] run function cp2:type/work/player/respawn
 
 
-
-
+#傳送陣告知
+execute if entity @s[tag=teleport_a,tag=blue] run title @a[team=blue,distance=..2,gamemode=!spectator] actionbar "靠近蹲下來使用傳送陣"
+execute if entity @s[tag=teleport_a,tag=gold] run title @a[team=gold,distance=..2,gamemode=!spectator] actionbar "靠近蹲下來使用傳送陣"
 
 
 #金礦重生

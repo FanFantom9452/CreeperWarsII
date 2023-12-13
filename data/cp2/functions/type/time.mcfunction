@@ -43,7 +43,7 @@ execute if score Creeper.Regen command_timer matches 3.. run scoreboard players 
 
 #game Time
 execute if score Winner.Testfor command matches 1 run scoreboard players add 遊戲時間 list 1
-execute if score 遊戲時間 list matches 10 run function cp2:type/work/war_phase/1
+execute if score 遊戲時間 list matches 3 run function cp2:type/work/war_phase/1
 execute if score 遊戲時間 list matches 600 run function cp2:type/work/war_phase/2
 execute if score 遊戲時間 list matches 1200 run function cp2:type/work/war_phase/3
 execute if score 遊戲時間 list matches 1800 run function cp2:type/work/war_phase/4

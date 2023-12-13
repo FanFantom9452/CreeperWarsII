@@ -24,6 +24,8 @@ execute if score @s hp matches ..0 run function hp_system:type/work/tick_worker/
 execute if entity @s[type=creeper,nbt={HurtTime:10s}] on attacker run scoreboard players operation @s playerAttackDmg /= 10 command
 execute if entity @s[type=creeper,nbt={HurtTime:10s}] on attacker run scoreboard players operation @s final.atkCrp += @s playerAttackDmg
 execute if entity @s[type=creeper,nbt={HurtTime:10s}] on attacker run scoreboard players operation @s final.atkAll += @s playerAttackDmg
+#增加打苦力怕懲罰
+execute if entity @s[type=creeper,nbt={HurtTime:10s}] on attacker run scoreboard players add @s death_CD 2
 
 #給予無敵計算正確數值傷害
 effect give @s resistance infinite 4 true

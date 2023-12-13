@@ -1,0 +1,31 @@
+[
+  {
+    "function": "minecraft:set_name",
+    "entity": "this",
+    "name": [
+      [
+        {
+          "text": "§b金礦重生時間 ",
+          "color": "white",
+          "italic": false
+        },
+        {
+          "score": {
+            "name": "GoldOre.Respawn",
+            "objective": "command"
+          },
+          "color" : "gold",
+          "italic": false,
+          "bold": true,
+          "underlined": true
+        },
+        {
+          "text": "§r §b秒",
+          "color": "white",
+          "italic": false
+        }
+      ]
+    ],
+    "replace": false
+  }
+]

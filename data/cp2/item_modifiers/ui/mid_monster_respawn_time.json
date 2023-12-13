@@ -1,0 +1,31 @@
+[
+  {
+    "function": "minecraft:set_name",
+    "entity": "this",
+    "name": [
+      [
+        {
+          "text": "§b吸吸怪§7(中央野怪)§b重生時間 ",
+          "color": "white",
+          "italic": false
+        },
+        {
+          "score": {
+            "name": "MidMonster.Respawn",
+            "objective": "command"
+          },
+          "color" : "gold",
+          "italic": false,
+          "bold": true,
+          "underlined": true
+        },
+        {
+          "text": "§r §b秒",
+          "color": "white",
+          "italic": false
+        }
+      ]
+    ],
+    "replace": false
+  }
+]

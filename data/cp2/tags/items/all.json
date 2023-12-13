@@ -1,6 +1,7 @@
 {
 	"replace": false,
 	"values": [
+		"minecraft:iron_golem_spawn_egg",
 		"minecraft:acacia_boat",
 		"minecraft:polished_blackstone_pressure_plate",
 		"minecraft:netherite_pickaxe",

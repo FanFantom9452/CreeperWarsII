@@ -14,7 +14,7 @@ scoreboard players set MainCastle.MaxHp command 250
 scoreboard players set SubCastle.MaxHp command 150
 scoreboard players set Random.Game.Event command 90
 scoreboard players set GoldOre.Respawn command 60
-scoreboard players set EmeraldOre.Respawn command 180
+scoreboard players set EmeraldOre.Respawn command 120
 scoreboard players set WildMonster.Respawn command 75
 scoreboard players set MidMonster.Respawn command 40
 scoreboard players set OreGod.Respawn command 300
@@ -80,7 +80,7 @@ scoreboard players set beacon.2 upgrade.gold 0
 scoreboard objectives add shop.atm dummy "是否點下提領金錢"
 scoreboard objectives add current.money dummy "火藥數量"
 
-scoreboard objectives add sneak.time dummy "蹲下時間"
+scoreboard objectives add sneak.time minecraft.custom:minecraft.sneak_time "蹲下時間"
 scoreboard objectives add teleport.time dummy "傳送時間"
 
 

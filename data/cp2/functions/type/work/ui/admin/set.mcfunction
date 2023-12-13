@@ -32,7 +32,7 @@ item replace entity @s inventory.21 with black_stained_glass_pane{clear:1b,displ
 item replace entity @s inventory.22 with black_stained_glass_pane{clear:1b,display:{Name:'{"text": ""}'}}
 item replace entity @s inventory.23 with black_stained_glass_pane{clear:1b,display:{Name:'{"text": ""}'}}
 item replace entity @s inventory.24 with black_stained_glass_pane{clear:1b,display:{Name:'{"text": ""}'}}
-item replace entity @s inventory.25 with lime_wool{clear:1b,display:{Name:'{"text": "§a開始遊戲"}',Lore:['{"text": "§7點我開始遊戲"}']}}
+item replace entity @s inventory.25 with diamond_block{clear:1b,display:{Name:'{"text": "§a開始遊戲"}',Lore:['{"text": "§7點我開始遊戲"}']}}
 item replace entity @s inventory.26 with paper{clear:1b,display:{Name:'{"text": "下一頁","color": "#B8B3FF"}'}}
 
 

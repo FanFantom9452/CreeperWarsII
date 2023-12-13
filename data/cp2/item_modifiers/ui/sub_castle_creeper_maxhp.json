@@ -1,0 +1,31 @@
+[
+  {
+    "function": "minecraft:set_name",
+    "entity": "this",
+    "name": [
+      [
+        {
+          "text": "§b守護者苦力怕血量 ",
+          "color": "white",
+          "italic": false
+        },
+        {
+          "score": {
+            "name": "SubCastle.MaxHp",
+            "objective": "command"
+          },
+          "color" : "gold",
+          "italic": false,
+          "bold": true,
+          "underlined": true
+        },
+        {
+          "text": "§r §b血量",
+          "color": "white",
+          "italic": false
+        }
+      ]
+    ],
+    "replace": false
+  }
+]

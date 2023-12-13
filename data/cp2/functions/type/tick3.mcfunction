@@ -23,6 +23,10 @@ kill @e[type=text_display,tag=text,scores={command_timer=20..}]
 execute as @e[type=creeper] at @s run function cp2:type/work/tick_worker/creeper_for_tick
 
 
+#雪球運作
+execute as @e[type=snowball] at @s run function cp2:type/work/tick_worker/snowball_for_tick
+
+
 
 #商人重製
 execute if entity @e[type=witch,name=!,tag=] run function cp2:type/summon/shop_reset

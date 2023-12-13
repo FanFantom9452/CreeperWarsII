@@ -56,8 +56,12 @@ execute if score @s kill matches 1.. run function cp2:type/work/player/kill_play
 execute if score @s[team=blue] sneak.time matches 1.. run function cp2:type/work/player/trying_teleport {team:"blue"}
 execute if score @s[team=gold] sneak.time matches 1.. run function cp2:type/work/player/trying_teleport {team:"gold"}
 #傳送完成
-execute if score @s[team=blue,scores={teleport.time=160..}] sneak.time matches 1.. if entity @e[type=marker,tag=teleport_a,tag=blue,distance=..2] run function cp2:type/work/player/teleported {team:"blue"}
-execute if score @s[team=gold,scores={teleport.time=160..}] sneak.time matches 1.. if entity @e[type=marker,tag=teleport_a,tag=gold,distance=..2] run function cp2:type/work/player/teleported {team:"gold"}
+execute if score @s[team=blue,scores={teleport.time=80..}] sneak.time matches 1.. if entity @e[type=marker,tag=teleport_a,tag=blue,distance=..2] run function cp2:type/work/player/teleported {team:"blue"}
+execute if score @s[team=gold,scores={teleport.time=80..}] sneak.time matches 1.. if entity @e[type=marker,tag=teleport_a,tag=gold,distance=..2] run function cp2:type/work/player/teleported {team:"gold"}
+execute if score @s teleport.time matches 1..20 run effect give @s slowness 1 0 true
+execute if score @s teleport.time matches 21..40 run effect give @s slowness 1 1 true
+execute if score @s teleport.time matches 41..60 run effect give @s slowness 1 2 true
+execute if score @s teleport.time matches 61..80 run effect give @s slowness 1 3 true
 scoreboard players remove @s[scores={teleport.time=1..}] teleport.time 1
 
 
