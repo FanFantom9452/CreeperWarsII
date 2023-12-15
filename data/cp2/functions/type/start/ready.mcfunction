@@ -94,4 +94,3 @@ execute at @e[type=marker,tag=mid] run function cp2:type/summon/mid_monster
 #額外指令包
 function add_pack:init
 
-

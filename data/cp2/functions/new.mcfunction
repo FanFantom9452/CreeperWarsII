@@ -47,6 +47,7 @@ scoreboard objectives add CD.hoe dummy "除技CD"
 
 
 scoreboard objectives add playerID dummy "玩家ID"
+scoreboard objectives add lastAttackerID dummy "最後攻擊我的玩家"
 scoreboard objectives add final.kill dummy "總擊殺數"
 scoreboard objectives add final.death dummy "總死亡數"
 scoreboard objectives add final.atkCrp dummy "對苦力怕的輸出"
