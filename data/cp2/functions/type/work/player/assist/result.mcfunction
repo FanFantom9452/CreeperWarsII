@@ -15,7 +15,7 @@ $execute if score #result_loop_amount playerID matches 1.. run function cp2:type
 #抓取完所有人一次把所有人的助攻+1
 #擊殺者不得獲得助攻
 scoreboard players operation #tmp lastAttackerID = @s lastAttackerID
-execute as @a[tag=assist.target] if score @s lastAttackerID = #tmp lastAttackerID run tag @s remove assist.target
+execute as @a[tag=assist.target] if score @s playerID = #tmp lastAttackerID run tag @s remove assist.target
 scoreboard players add @a[tag=assist.target] final.assist 1
 tellraw @a[tag=assist.target] ["",{"text":"Creeper ","color":"green"},{"text":"Wars ","color":"red"},{"text":"II","bold":true,"color":"gold"},{"text":" | 您協助擊殺 ","color":"gray"},{"selector":"@s"},{"text":" 獲得助攻","color":"gray"}]
 say add @a[tag=assist.target] final assist
