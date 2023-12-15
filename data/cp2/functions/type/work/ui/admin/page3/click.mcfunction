@@ -64,6 +64,7 @@ execute unless entity @s[nbt={Inventory:[{Slot:27b}]}] run function cp2:type/wor
 execute unless entity @s[nbt={Inventory:[{Slot:28b}]}] run scoreboard players remove OreGod.Respawn command 10
 execute unless entity @s[nbt={Inventory:[{Slot:28b}]}] run function cp2:type/work/ui/admin/page3/set
 
+execute unless entity @s[nbt={Inventory:[{Slot:29b}]}] run scoreboard players remove Isar.Respawn command 10
 execute unless entity @s[nbt={Inventory:[{Slot:29b}]}] run function cp2:type/work/ui/admin/page3/set
 
 

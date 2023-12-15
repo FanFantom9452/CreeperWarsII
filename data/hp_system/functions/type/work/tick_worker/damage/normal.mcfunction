@@ -13,7 +13,6 @@ scoreboard players operation @s hp -= @s damage
 
 
 
-
 #hp_bar live time
 scoreboard players set @s[tag=!hp_bar_showed] hp_bar_timer 100
 execute if entity @s[tag=!hp_bar_showed] store result storage hp_system:hp_bar id int 1 run scoreboard players get @s id

@@ -10,7 +10,7 @@ effect give @a resistance 5 4 true
 execute as @a[team=] at @s run function cp2:type/work/player/new_player_join
 
 #顯示人數
-execute store result score 玩家人數 list run execute if entity @a[team=!spec]
+execute store result score 玩家人數 list if entity @a[team=!spec]
 
 #選擇職業
 execute at @e[type=marker,tag=lobby] run setblock ~ ~2 ~ ender_chest 

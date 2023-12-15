@@ -3,7 +3,7 @@
 #所有玩家運作 / 殺人 / 死亡 / 統計 / 團隊羊毛
 execute as @a at @s run function cp2:type/work/tick_worker/player_for_tick
 #顯示玩家人數
-execute store result score 玩家人數 list run execute if entity @a[team=!spec]
+execute store result score 玩家人數 list if entity @a[team=!spec]
 
 
 #marker worker

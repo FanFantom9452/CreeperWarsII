@@ -46,11 +46,13 @@ scoreboard objectives add CD.shovel dummy "鏟技CD"
 scoreboard objectives add CD.hoe dummy "除技CD"
 
 
+scoreboard objectives add playerID dummy "玩家ID"
 scoreboard objectives add final.kill dummy "總擊殺數"
 scoreboard objectives add final.death dummy "總死亡數"
 scoreboard objectives add final.atkCrp dummy "對苦力怕的輸出"
 scoreboard objectives add final.atkAll dummy "總輸出傷害"
 scoreboard objectives add final.defAll dummy "總扛傷害"
+scoreboard objectives add final.assist dummy "總助攻數"
 scoreboard objectives add tmp.atkDmg minecraft.custom:minecraft.damage_dealt "暫存攻擊傷害"
 scoreboard objectives add tmp.atkDmg2 minecraft.custom:minecraft.damage_dealt_absorbed "暫存攻擊傷害"
 scoreboard objectives add tmp.defDmg minecraft.custom:minecraft.damage_taken "暫存扛下傷害"

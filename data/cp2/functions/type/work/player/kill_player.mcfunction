@@ -4,4 +4,5 @@ effect give @s glowing 5 0 false
 xp add @s 1 levels
 scoreboard players add @s death_CD 3
 scoreboard players add @s final.kill 1
+#reset
 scoreboard players remove @s kill 1

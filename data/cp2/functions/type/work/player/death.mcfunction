@@ -8,3 +8,4 @@ execute if score 戰爭階段 list matches 4.. run scoreboard players add @s dea
 execute if score 戰爭階段 list matches 5.. run scoreboard players add @s death_CD 10
 scoreboard players reset @s death
 scoreboard players add @s final.death 1
+function cp2:type/work/player/assist/input_for_result
