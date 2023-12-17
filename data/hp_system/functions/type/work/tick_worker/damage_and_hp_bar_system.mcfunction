@@ -2,7 +2,7 @@
 
 
 #last attacker
-execute store result score @s[nbt={HurtTime:10s}] lastAttackerID on attacker run scoreboard players get @s playerID
+execute store result score @s[nbt={HurtTime:10s}] lastAttackerID on attacker if entity @s[type=player] run scoreboard players get @s playerID
 
 
 #物理傷害 (紅色)
