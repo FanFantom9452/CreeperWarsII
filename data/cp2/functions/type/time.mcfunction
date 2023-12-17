@@ -26,10 +26,9 @@ execute if score 戰爭階段 list matches 3.. if score RandomGameEvent command_
 
 #第五階段 苦力怕開始凋零
 execute if score 戰爭階段 list matches 5.. run scoreboard players add Creeper.Wither command_timer 1
-execute if score 戰爭階段 list matches 5.. run scoreboard players add @e[type=creeper,tag=sub_castle_creeper] damage 30
-execute if score 戰爭階段 list matches 5.. if score Creeper.Wither command_timer matches 2.. run scoreboard players add @e[type=creeper,tag=main_castle_creeper] damage 40
-execute if score 戰爭階段 list matches 5.. if score Creeper.Wither command_timer matches 2.. run function cp2:type/work/tick_worker/creeper_health_bossbar_update {HurtTime:0}
-execute if score 戰爭階段 list matches 5.. if score Creeper.Wither command_timer matches 2.. run scoreboard players reset Creeper.Wither command_timer
+execute if score 戰爭階段 list matches 5.. if score Creeper.Wither command_timer matches 3.. run scoreboard players add @e[type=creeper,tag=sub_castle_creeper] damage 30
+execute if score 戰爭階段 list matches 5.. if score Creeper.Wither command_timer matches 3.. run scoreboard players add @e[type=creeper,tag=main_castle_creeper] damage 40
+execute if score 戰爭階段 list matches 5.. if score Creeper.Wither command_timer matches 3.. run scoreboard players reset Creeper.Wither command_timer
 
 
 

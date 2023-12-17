@@ -34,7 +34,8 @@ execute if entity @s[tag=emerald_ore] if block ~ ~ ~ bedrock run function cp2:ty
 execute if entity @s[tag=emerald_ore] if score @s command_timer matches 0 run setblock ~ ~ ~ emerald_ore
 execute if entity @s[tag=emerald_ore] if score @s command_timer matches 0 run scoreboard players operation @s command_timer = EmeraldOre.Respawn command
 
-
+#ATM ender chest
+execute if entity @s[tag=ender_chest] if block ~ ~ ~ air run setblock ~ ~ ~ ender_chest
 
 #野怪重生
 execute if entity @s[tag=wild_monster] unless score @s command_timer matches -2147483648..2147483647 run scoreboard players operation @s command_timer = WildMonster.Respawn command

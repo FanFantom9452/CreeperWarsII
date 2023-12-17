@@ -5,7 +5,8 @@
 $execute store result score #tmp_attackerID playerID run data get storage cp2:assist.$(deathPlayerID) attackerID[0]
 #運作
 execute as @a if score @s playerID = #tmp_attackerID playerID run tag @s add assist.target
-say @a[tag=assist.target] is attacker
+#Debug
+#say @a[tag=assist.target] is attacker
 #刪除
 $data remove storage cp2:assist.$(deathPlayerID) attackerID[0]
 #判定是否要遞迴
@@ -18,7 +19,8 @@ scoreboard players operation #tmp lastAttackerID = @s lastAttackerID
 execute as @a[tag=assist.target] if score @s playerID = #tmp lastAttackerID run tag @s remove assist.target
 scoreboard players add @a[tag=assist.target] final.assist 1
 tellraw @a[tag=assist.target] ["",{"text":"Creeper ","color":"green"},{"text":"Wars ","color":"red"},{"text":"II","bold":true,"color":"gold"},{"text":" | 您協助擊殺 ","color":"gray"},{"selector":"@s"},{"text":" 獲得助攻","color":"gray"}]
-say add @a[tag=assist.target] final assist
+#Debug
+#say add @a[tag=assist.target] final assist
 tag @a[tag=assist.target] remove assist.target
 #刪除容器
 $data remove storage cp2:assist.$(deathPlayerID) attackerID

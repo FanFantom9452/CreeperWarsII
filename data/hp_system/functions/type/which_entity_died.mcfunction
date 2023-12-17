@@ -1,13 +1,12 @@
 #Made By Fan_Fan_tom
-execute if entity @s[type=creeper,tag=sub_castle_creeper,tag=blue] run say blue sub_castle_creeper died
-execute if entity @s[type=creeper,tag=sub_castle_creeper,tag=gold] run say gold sub_castle_creeper died
+execute if entity @s[type=creeper,tag=sub_castle_creeper,tag=blue] run function cp2:type/work/sub_castle_creeper_died {team_name:"藍隊",color:"aqua"}
+execute if entity @s[type=creeper,tag=sub_castle_creeper,tag=gold] run function cp2:type/work/sub_castle_creeper_died {team_name:"金隊",color:"gold"}
 
-execute if entity @s[type=creeper,tag=main_castle_creeper,tag=blue] run say blue main_castle_creeper died
-execute if entity @s[type=creeper,tag=main_castle_creeper,tag=gold] run say gold main_castle_creeper died
-
+execute if entity @s[type=creeper,tag=main_castle_creeper,tag=blue] run function cp2:type/work/main_castle_creeper_died {team_name:"藍隊",color:"aqua"}
+execute if entity @s[type=creeper,tag=main_castle_creeper,tag=gold] run function cp2:type/work/main_castle_creeper_died {team_name:"金隊",color:"gold"}
 
 #更新BOSS血量
-execute if entity @s[type=creeper] run function cp2:type/work/tick_worker/creeper_health_bossbar_update {HurtTime:10}
+execute if entity @s[type=creeper] run function cp2:type/work/tick_worker/all_creeper_health_bossbar_update {HurtTime:"10s"}
 
 #野怪給予等級
 execute if entity @s[type=llama,tag=wild_monster] on attacker run xp add @s 5 levels
