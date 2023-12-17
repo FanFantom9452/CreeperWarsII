@@ -28,7 +28,8 @@ scoreboard players reset * final.death
 scoreboard players reset * final.atkCrp
 scoreboard players reset * final.atkAll
 scoreboard players reset * final.defAll
-
+scoreboard players reset * final.mined_gold
+scoreboard players reset * final.mined_emerald
 scoreboard players reset * tmp.atkDmg
 scoreboard players reset * tmp.atkDmg2
 scoreboard players reset * tmp.defDmg

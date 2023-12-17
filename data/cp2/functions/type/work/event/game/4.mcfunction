@@ -3,7 +3,6 @@ tellraw @a ["",{"text":"\n"},{"text":"Creeper ","color":"green"},{"text":"Wars "
 title @a times 10 40 10
 title @a subtitle "隨機 1 位玩家扣除 50 元"
 title @a title "§c查水表"
-give @a[team=!spec] bread 32
 tag @r[team=!spec] add Fan.tmp.event
 tellraw @a[tag=Fan.tmp.event] ["",{"text":"Creeper ","color":"green"},{"text":"Wars ","color":"red"},{"text":"II","bold":true,"color":"gold"},{"text":" | ","color":"gray"},{"text":"您被查水表 從帳戶中扣除 50 元","color":"yellow"}]
 scoreboard players remove @a[tag=Fan.tmp.event] money 50
