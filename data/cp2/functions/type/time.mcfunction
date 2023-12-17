@@ -22,7 +22,7 @@ execute if score 戰爭階段 list matches 1 run scoreboard players set @e[type=
 
 #第三階段隨機事件
 execute if score 戰爭階段 list matches 3.. run scoreboard players add RandomGameEvent command_timer 1
-execute if score 戰爭階段 list matches 3.. if score RandomGameEvent command_timer >= Random.Game.Event command run function cp2:type/work/event/worker {min:1,max:2}
+execute if score 戰爭階段 list matches 3.. if score RandomGameEvent command_timer >= Random.Game.Event command run function cp2:type/work/event/worker {min:1,max:8}
 
 #第五階段 苦力怕開始凋零
 execute if score 戰爭階段 list matches 5.. run scoreboard players add Creeper.Wither command_timer 1
