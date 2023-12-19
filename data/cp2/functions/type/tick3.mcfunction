@@ -26,6 +26,10 @@ execute as @e[type=creeper] at @s run function cp2:type/work/tick_worker/creeper
 #雪球運作
 execute as @e[type=snowball] at @s run function cp2:type/work/tick_worker/snowball_for_tick
 
+#BOSS FIGHT
+execute as @e[type=iron_golem,tag=boss] at @s run function cp2:type/work/boss/ore_god_work
+execute as @e[type=ravager,tag=boss] at @s run function cp2:type/work/boss/isar_work
+
 
 
 #商人重製
