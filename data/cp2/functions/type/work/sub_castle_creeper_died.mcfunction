@@ -9,7 +9,12 @@ $execute if entity @a[tag=Fan.creeperKiller] run tellraw @a ["",{"text":"Creeper
 #沒找到擊殺者
 $execute unless entity @a[tag=Fan.creeperKiller] run tellraw @a ["",{"text":"Creeper ","color":"green"},{"text":"Wars ","color":"red"},{"text":"II","bold":true,"color":"gold"},{"text":" | ","color":"gray"},{"text":"【","color":"$(color)"},{"text":"$(team_name)","color":"white"},{"text":"】守護者苦力怕 ","color":"$(color)"},{"text":"死亡了","color":"white"}]
 
-
+#已有情侶 : 抽小三 2nd
+$execute if entity @a[team=$(team),tag=couple1] if entity @a[team=$(team),tag=couple2] unless entity @a[team=$(team),tag=small3] run function cp2:type/work/couple/small3 {team:"$(team)"}
+#還沒有情侶 1st
+$execute unless entity @a[team=$(team),tag=couple1] unless entity @a[team=$(team),tag=couple2] run function cp2:type/work/couple/first_couple {team:"$(team)"}
+#場上如果沒有守護者苦力怕 則觸發
+#$execute unless entity @e[type=creeper,tag=sub_castle_creeper,tag=$(team)] run 
 
 
 #remove tag

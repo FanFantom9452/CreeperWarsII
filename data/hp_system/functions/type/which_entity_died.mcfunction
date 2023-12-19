@@ -1,9 +1,9 @@
 #Made By Fan_Fan_tom
-execute if entity @s[type=creeper,tag=sub_castle_creeper,tag=blue] run function cp2:type/work/sub_castle_creeper_died {team_name:"藍隊",color:"aqua"}
-execute if entity @s[type=creeper,tag=sub_castle_creeper,tag=gold] run function cp2:type/work/sub_castle_creeper_died {team_name:"金隊",color:"gold"}
+execute if entity @s[type=creeper,tag=sub_castle_creeper,tag=blue] run function cp2:type/work/sub_castle_creeper_died {team_name:"藍隊",color:"aqua",team:"blue"}
+execute if entity @s[type=creeper,tag=sub_castle_creeper,tag=gold] run function cp2:type/work/sub_castle_creeper_died {team_name:"金隊",color:"gold",team:"gold"}
 
-execute if entity @s[type=creeper,tag=main_castle_creeper,tag=blue] run function cp2:type/work/main_castle_creeper_died {team_name:"藍隊",color:"aqua"}
-execute if entity @s[type=creeper,tag=main_castle_creeper,tag=gold] run function cp2:type/work/main_castle_creeper_died {team_name:"金隊",color:"gold"}
+execute if entity @s[type=creeper,tag=main_castle_creeper,tag=blue] run function cp2:type/work/main_castle_creeper_died {team_name:"藍隊",color:"aqua",team:"blue"}
+execute if entity @s[type=creeper,tag=main_castle_creeper,tag=gold] run function cp2:type/work/main_castle_creeper_died {team_name:"金隊",color:"gold",team:"gold"}
 
 #更新BOSS血量
 execute if entity @s[type=creeper] run function cp2:type/work/tick_worker/all_creeper_health_bossbar_update {HurtTime:"10s"}

@@ -38,6 +38,9 @@ scoreboard players reset * tmp.defDmg3
 
 
 #basic setting
+tag @a remove couple1
+tag @a remove couple2
+scoreboard players reset * closeness
 xp set @a 0 levels
 xp set @a 0 points
 gamemode survival @a[team=!spec]

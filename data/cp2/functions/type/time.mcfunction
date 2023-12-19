@@ -4,6 +4,10 @@
 #marker worker
 execute as @e[type=marker] at @s run function cp2:type/work/tick_worker/marker_for_time
 
+#所有玩家運作 / time
+execute as @a at @s run function cp2:type/work/tick_worker/player_for_time
+
+
 
 #吸吸怪無法長大
 execute as @e[type=sniffer,tag=mid_monster] run data modify entity @s Age set value -1000

@@ -35,6 +35,7 @@ scoreboard objectives setdisplay sidebar list
 scoreboard objectives add HP health {"text":"\u2764","color":"#FF1CB8"}
 scoreboard objectives setdisplay below_name HP
 
+scoreboard objectives add closeness dummy "親密度"
 
 
 scoreboard objectives add kit dummy "職業"

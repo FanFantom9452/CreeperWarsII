@@ -28,6 +28,10 @@ execute if entity @s[nbt=!{active_effects:[{id:"minecraft:invisibility"}]},nbt=!
 #execute if score @s[nbt={SelectedItem:{id:"minecraft:wooden_sword"}}] rc matches 1.. run effect give @s levitation 1 1 true
 execute if score @s rc matches 1.. run scoreboard players reset @s rc
 
+#情侶系統
+execute if entity @s[tag=couple1,team=blue] run function cp2:type/work/couple/work {team:"blue"}
+execute if entity @s[tag=couple1,team=gold] run function cp2:type/work/couple/work {team:"gold"}
+
 
 
 #助攻系統
