@@ -4,7 +4,7 @@
 data remove storage cp2:assist attackerID
 data remove storage cp2:assist playerID
 
-say saved
+#say saved
 
 execute store result storage cp2:assist attackerID int 1 on attacker run scoreboard players get @s playerID
 execute store result storage cp2:assist playerID int 1 run scoreboard players get @s playerID
