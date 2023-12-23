@@ -39,6 +39,8 @@ scoreboard objectives add closeness dummy "親密度"
 
 
 scoreboard objectives add kit dummy "職業"
+scoreboard objectives add holding.kit dummy "點選的職業"
+scoreboard objectives add CD.change_kit dummy "轉職冷卻"
 scoreboard objectives add rc minecraft.used:minecraft.carrot_on_a_stick "使用右鍵"
 scoreboard objectives add CD.sword dummy "劍技CD"
 scoreboard objectives add CD.axe dummy "斧技CD"
@@ -89,6 +91,7 @@ scoreboard objectives add current.money dummy "火藥數量"
 scoreboard objectives add sneak.time minecraft.custom:minecraft.sneak_time "蹲下時間"
 scoreboard objectives add teleport.time dummy "傳送時間"
 
+scoreboard objectives add free.offhand dummy "解放副手時間"
 
 
 #Creeper Health

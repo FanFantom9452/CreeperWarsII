@@ -20,21 +20,35 @@ execute if score @s shop.atm matches 1 run function cp2:type/work/shop/atm/withd
 execute if score @s shop.atm matches 10 run function cp2:type/work/shop/atm/withdraw_money {cost:10}
 execute if score @s shop.atm matches 64 run function cp2:type/work/shop/atm/withdraw_money {cost:100}
 
+#選擇職業
+execute unless score @s kit matches -2147483648..2147483647 run scoreboard players set @s kit 0
+execute if data entity @s Inventory[].tag.choose_kit_item store result score @s holding.kit run data get entity @s Inventory[].tag.kit 1
+execute if score @s holding.kit matches -2147483648..2147483647 run function cp2:type/work/player/choose_kit/worker
+
+
 #持續替換副手
-execute if entity @s[nbt={active_effects:[{id:"minecraft:invisibility"}]}] run clear @s carrot_on_a_stick{clear:1b,rc:1b}
-execute if entity @s[nbt=!{active_effects:[{id:"minecraft:invisibility"}]},nbt=!{Inventory:[{Slot:-106b,id:"minecraft:carrot_on_a_stick",tag:{rc:1b}}]}] run function cp2:type/work/player/replace_offhand
+execute unless score @s free.offhand matches -2147483648..2147483647 run scoreboard players set @s free.offhand 0
+execute if score @s free.offhand matches 1.. run scoreboard players remove @s free.offhand 1
+execute if entity @s[nbt={active_effects:[{id:"minecraft:invisibility"}]}] run scoreboard players add @s free.offhand 1
+execute if score @s free.offhand matches 1.. run clear @s carrot_on_a_stick{clear:1b,rc:1b}
+execute if entity @s[scores={free.offhand=0},nbt=!{Inventory:[{Slot:-106b,id:"minecraft:carrot_on_a_stick",tag:{rc:1b}}]}] run function cp2:type/work/player/replace_offhand
+
+#新增說明
+execute if entity @s[nbt={Inventory:[{Slot:-106b,id:"minecraft:carrot_on_a_stick",tag:{rc:1b}}]},team=blue] run function cp2:type/item/check_item_to_set_lore {team:"blue"}
+execute if entity @s[nbt={Inventory:[{Slot:-106b,id:"minecraft:carrot_on_a_stick",tag:{rc:1b}}]},team=gold] run function cp2:type/item/check_item_to_set_lore {team:"gold"}
 
 #右鍵使用
-#execute if score @s[nbt={SelectedItem:{id:"minecraft:wooden_sword"}}] rc matches 1.. run effect give @s levitation 1 1 true
-execute if score @s rc matches 1.. run scoreboard players reset @s rc
+execute if score @s[team=blue] rc matches 1.. run function cp2:type/work/skill/worker {team:"blue"}
+execute if score @s[team=gold] rc matches 1.. run function cp2:type/work/skill/worker {team:"gold"}
 
 #情侶系統
-execute if entity @s[tag=couple1,team=blue] run function cp2:type/work/couple/work {team:"blue"}
-execute if entity @s[tag=couple1,team=gold] run function cp2:type/work/couple/work {team:"gold"}
+execute if entity @s[tag=couple1,team=blue] run function cp2:type/work/couple/work_for_couple {team:"blue"}
+execute if entity @s[tag=couple1,team=gold] run function cp2:type/work/couple/work_for_couple {team:"gold"}
 
 
 
 #助攻系統
+#扛傷統計 / 受傷清除隱形
 #在成就裡面 player hurt player 
 
 

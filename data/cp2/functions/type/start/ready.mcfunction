@@ -40,7 +40,10 @@ scoreboard players reset * tmp.defDmg3
 #basic setting
 tag @a remove couple1
 tag @a remove couple2
+tag @a remove small3
 scoreboard players reset * closeness
+scoreboard players set blue closeness 0
+scoreboard players set gold closeness 0
 xp set @a 0 levels
 xp set @a 0 points
 gamemode survival @a[team=!spec]
@@ -55,6 +58,8 @@ effect give @a saturation 20 87 true
 effect give @a weakness 6 100 true
 effect give @a blindness 6 100 true
 effect give @a invisibility 6 1 true
+#轉職冷卻
+scoreboard players set @a CD.change_kit 600
 
 #關閉偵測勝利
 scoreboard players set Winner.Testfor command 0
@@ -98,3 +103,5 @@ execute at @e[type=marker,tag=mid] run function cp2:type/summon/mid_monster
 #額外指令包
 function add_pack:init
 
+#刪除頻障大廳
+execute at @e[type=marker,tag=lobby] if block ~ ~-1 ~ barrier run fill ~14 ~-1 ~14 ~-14 ~5 ~-14 air

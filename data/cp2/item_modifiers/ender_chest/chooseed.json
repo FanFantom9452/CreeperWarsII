@@ -1,0 +1,19 @@
+[
+  {
+    "function": "minecraft:set_lore",
+    "entity": "this",
+    "lore": [
+      {
+        "text": "§d§l§n(已選擇該職業)"
+      }
+    ],
+    "replace": false
+  },
+  {
+    "function": "minecraft:set_enchantments",
+    "enchantments": {
+      "minecraft:infinity": 10
+    },
+    "add": false
+  }
+]

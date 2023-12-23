@@ -1,0 +1,31 @@
+[
+  {
+    "function": "minecraft:set_lore",
+    "entity": "this",
+    "lore": [
+      {
+        "text": "§c[§fLv.3§c] 小三專屬技能§7(蹲下右鍵施放)"
+      },
+      {
+        "text": "§f自身獲得隱形效果 120 秒"
+      },
+      {
+        "text": "§f並對半徑 8 格內的敵人造成 6 點傷害"
+      },
+      {
+        "text": "§2冷卻 §e§l90§r §2秒"
+      },
+      {
+        "text": "§f憎恨度達到2400會強化此技能"
+      },
+      {
+        "text": " "
+      }
+    ],
+    "replace": false
+  },
+  {
+    "function": "minecraft:set_nbt",
+    "tag": "{small3:1b}"
+  }
+]

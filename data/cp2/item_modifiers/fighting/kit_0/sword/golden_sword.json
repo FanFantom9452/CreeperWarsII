@@ -1,0 +1,58 @@
+[
+  {
+    "function": "minecraft:set_lore",
+    "entity": "this",
+    "lore": [
+      {
+        "text": "§6[§fLv.4§6] 副手解放§7(右鍵施放)"
+      },
+      {
+        "text": "§f解除副手限制 80 秒"
+      },
+      {
+        "text": "§2冷卻 §e§l100§r §2秒"
+      },
+      {
+        "text": "§f使用更好的武器品質來強化此技能"
+      },
+      {
+        "text": " "
+      }
+    ],
+    "replace": false,
+    "conditions": [
+      {
+        "condition": "minecraft:entity_properties",
+        "entity": "this",
+        "predicate": {
+          "equipment": {
+            "mainhand": {
+              "items": [
+                "minecraft:golden_sword"
+              ]
+            }
+          }
+        }
+      }
+    ]
+  },
+  {
+    "function": "minecraft:set_nbt",
+    "tag": "{sword:1b}",
+    "conditions": [
+      {
+        "condition": "minecraft:entity_properties",
+        "entity": "this",
+        "predicate": {
+          "equipment": {
+            "mainhand": {
+              "items": [
+                "minecraft:golden_sword"
+              ]
+            }
+          }
+        }
+      }
+    ]
+  }
+]

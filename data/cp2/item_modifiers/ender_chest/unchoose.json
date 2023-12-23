@@ -1,0 +1,12 @@
+[
+  {
+    "function": "minecraft:set_lore",
+    "entity": "this",
+    "lore": [
+      {
+        "text": "§7(將此物品放置於背包來選擇該職業)"
+      }
+    ],
+    "replace": false
+  }
+]

@@ -1,0 +1,59 @@
+[
+  {
+    "function": "minecraft:set_lore",
+    "entity": "this",
+    "lore": [
+      {
+        "text": "§a[§fLv.2§a] 副手解放§7(右鍵施放)"
+      },
+      {
+        "text": "§f解除副手限制 40 秒"
+      },
+      {
+        "text": "§2冷卻 §e§l70§r §2秒"
+      },
+      {
+        "text": "§f使用更好的武器品質來強化此技能"
+      },
+      {
+        "text": " "
+      }
+    ],
+    "replace": false,
+    "conditions": [
+      {
+        "condition": "minecraft:entity_properties",
+        "entity": "this",
+        "predicate": {
+          "equipment": {
+            "mainhand": {
+              "items": [
+                "minecraft:stone_sword"
+              ]
+            }
+          }
+        }
+      }
+    ]
+    
+  },
+  {
+    "function": "minecraft:set_nbt",
+    "tag": "{sword:1b}",
+    "conditions": [
+      {
+        "condition": "minecraft:entity_properties",
+        "entity": "this",
+        "predicate": {
+          "equipment": {
+            "mainhand": {
+              "items": [
+                "minecraft:stone_sword"
+              ]
+            }
+          }
+        }
+      }
+    ]
+  }
+]

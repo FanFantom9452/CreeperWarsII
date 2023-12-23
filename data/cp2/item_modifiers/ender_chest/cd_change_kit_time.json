@@ -1,0 +1,31 @@
+[
+  {
+    "function": "minecraft:set_name",
+    "entity": "this",
+    "name": [
+      [
+        {
+          "text": "§a轉職冷卻時間剩餘 ",
+          "color": "white",
+          "italic": false
+        },
+        {
+          "score": {
+            "name": "@s",
+            "objective": "CD.change_kit"
+          },
+          "color" : "gold",
+          "italic": false,
+          "bold": true,
+          "underlined": true
+        },
+        {
+          "text": "§r §a秒",
+          "color": "white",
+          "italic": false
+        }
+      ]
+    ],
+    "replace": true
+  }
+]

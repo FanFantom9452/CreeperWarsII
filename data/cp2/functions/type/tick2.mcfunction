@@ -13,8 +13,11 @@ execute as @a[team=] at @s run function cp2:type/work/player/new_player_join
 execute store result score 玩家人數 list if entity @a[team=!spec]
 
 #選擇職業
-execute at @e[type=marker,tag=lobby] run setblock ~ ~2 ~ ender_chest 
-
+execute as @a unless score @s kit matches -2147483648..2147483647 run scoreboard players set @s kit 0
+execute at @e[type=marker,tag=lobby] run setblock ~ ~2 ~ ender_chest
+execute at @e[type=marker,tag=lobby] run particle end_rod ~ ~ ~ 10 0.3 10 0 1 force @a[distance=..50]
+execute as @a if data entity @s Inventory[].tag.choose_kit_item store result score @s holding.kit run data get entity @s Inventory[].tag.kit 1
+execute as @a if score @s holding.kit matches -2147483648..2147483647 run function cp2:type/work/player/choose_kit/worker
 
 #關閉商店
 kill @e[type=minecraft:villager,tag=shop]
@@ -41,6 +44,8 @@ clear @a[tag=!admin] #cp2:all{clear:1b}
 
 
 
+#掉入虛空傳送回大廳
+execute as @a at @s if entity @s[y=-64.5,dy=-100] run tp @s @e[type=marker,tag=lobby,sort=nearest,limit=1]
 
 #Loop
 execute if score Function.Status command matches 2 run schedule function cp2:type/tick2 1t

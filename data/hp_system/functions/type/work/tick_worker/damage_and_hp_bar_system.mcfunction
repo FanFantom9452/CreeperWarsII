@@ -28,6 +28,7 @@ execute if entity @s[type=creeper,nbt={HurtTime:10s}] on attacker run scoreboard
 execute if entity @s[type=creeper,nbt={HurtTime:10s}] on attacker run scoreboard players operation @s final.atkAll += @s playerAttackDmg
 #增加打苦力怕懲罰
 execute if entity @s[type=creeper,nbt={HurtTime:10s}] on attacker run scoreboard players add @s death_CD 2
+execute if entity @s[type=creeper,nbt={HurtTime:10s}] on attacker run title @s actionbar ["",{"text":"攻擊苦力怕懲罰 死亡重生時間增加 ","color":"#FF6063"},{"text":"2","bold":true,"underlined":true,"color":"red"},{"text":" 秒","color":"#FF6063"},{"text":"(目前 ","color":"gray"},{"score":{"name":"@s","objective":"death_CD"},"bold":true,"underlined":true,"color":"white"},{"text":" 秒)","color":"gray"}]
 
 #給予無敵計算正確數值傷害
 effect give @s resistance infinite 4 true
