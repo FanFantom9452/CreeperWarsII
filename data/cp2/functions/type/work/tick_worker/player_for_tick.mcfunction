@@ -31,19 +31,39 @@ execute unless score @s free.offhand matches -2147483648..2147483647 run scorebo
 execute if score @s free.offhand matches 1.. run scoreboard players remove @s free.offhand 1
 execute if entity @s[nbt={active_effects:[{id:"minecraft:invisibility"}]}] run scoreboard players add @s free.offhand 1
 execute if score @s free.offhand matches 1.. run clear @s carrot_on_a_stick{clear:1b,rc:1b}
+#如果副手為火藥 則存進銀行
+execute if entity @s[nbt={Inventory:[{Slot:-106b,id:"minecraft:gunpowder"}]}] run function cp2:type/work/shop/atm/deposit_money
+#填充
 execute if entity @s[scores={free.offhand=0},nbt=!{Inventory:[{Slot:-106b,id:"minecraft:carrot_on_a_stick",tag:{rc:1b}}]}] run function cp2:type/work/player/replace_offhand
 
 #新增說明
 execute if entity @s[nbt={Inventory:[{Slot:-106b,id:"minecraft:carrot_on_a_stick",tag:{rc:1b}}]},team=blue] run function cp2:type/item/check_item_to_set_lore {team:"blue"}
 execute if entity @s[nbt={Inventory:[{Slot:-106b,id:"minecraft:carrot_on_a_stick",tag:{rc:1b}}]},team=gold] run function cp2:type/item/check_item_to_set_lore {team:"gold"}
 
+#手持武器顯示戰技冷卻
+execute if predicate cp2:swords if entity @s[tag=!holding.swords] run function cp2:type/work/skill/show_cd {type:"sword"}
+execute if predicate cp2:axes if entity @s[tag=!holding.axes] run function cp2:type/work/skill/show_cd {type:"axe"}
+execute if predicate cp2:pickaxes if entity @s[tag=!holding.pickaxes] run function cp2:type/work/skill/show_cd {type:"pickaxe"}
+execute if predicate cp2:shovels if entity @s[tag=!holding.shovels] run function cp2:type/work/skill/show_cd {type:"shovel"}
+execute if predicate cp2:hoes if entity @s[tag=!holding.hoes] run function cp2:type/work/skill/show_cd {type:"hoe"}
+#add tag
+execute if predicate cp2:swords run tag @s add holding.swords
+execute if predicate cp2:axes run tag @s add holding.axes
+execute if predicate cp2:pickaxes run tag @s add holding.pickaxes
+execute if predicate cp2:shovels run tag @s add holding.shovels
+execute if predicate cp2:hoes run tag @s add holding.hoes
+#remove tag
+execute unless predicate cp2:swords run tag @s remove holding.swords
+execute unless predicate cp2:axes run tag @s remove holding.axes
+execute unless predicate cp2:pickaxes run tag @s remove holding.pickaxes
+execute unless predicate cp2:shovels run tag @s remove holding.shovels
+execute unless predicate cp2:hoes run tag @s remove holding.hoes
+
 #右鍵使用
 execute if score @s[team=blue] rc matches 1.. run function cp2:type/work/skill/worker {team:"blue"}
 execute if score @s[team=gold] rc matches 1.. run function cp2:type/work/skill/worker {team:"gold"}
 
-#情侶系統
-execute if entity @s[tag=couple1,team=blue] run function cp2:type/work/couple/work_for_couple {team:"blue"}
-execute if entity @s[tag=couple1,team=gold] run function cp2:type/work/couple/work_for_couple {team:"gold"}
+
 
 
 

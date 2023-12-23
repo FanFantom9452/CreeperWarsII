@@ -1,7 +1,7 @@
 #Made By Fan_Fan_tom
+
 #檢查物品
 execute unless data entity @s Inventory[{Slot:-106b}].tag.sword if predicate cp2:swords run function cp2:type/item/update/swords {kit:0}
-
 
 
 
