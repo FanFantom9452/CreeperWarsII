@@ -6,7 +6,7 @@ execute if entity @a[gamemode=!spectator,distance=..20] run scoreboard players a
 
 #testfor timer
 execute if score @s command_timer matches 100..130 run function cp2:type/work/maho/warning_circle/red_10
-execute if score @s command_timer matches 131 as @a[distance=..10,gamemode=!spectator] run damage @s 10 mob_attack_no_aggro by @e[type=iron_golem,tag=boss,sort=nearest,limit=1]
+execute if score @s command_timer matches 131 as @a[distance=..10,gamemode=!spectator] run damage @s 4 mob_attack_no_aggro by @e[type=iron_golem,tag=boss,sort=nearest,limit=1]
 
  
 

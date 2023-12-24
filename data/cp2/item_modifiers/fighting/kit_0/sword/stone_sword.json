@@ -39,7 +39,7 @@
   },
   {
     "function": "minecraft:set_nbt",
-    "tag": "{sword:1b}",
+    "tag": "{sword:1b,axe:0b,pickaxe:0b,shovel:0b,hoe:0b}",
     "conditions": [
       {
         "condition": "minecraft:entity_properties",
