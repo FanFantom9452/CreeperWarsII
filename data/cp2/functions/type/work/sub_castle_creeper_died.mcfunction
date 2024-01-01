@@ -11,7 +11,7 @@ $execute unless entity @a[tag=Fan.creeperKiller] run tellraw @a ["",{"text":"Cre
 
 
 #場上如果沒有守護者苦力怕 則觸發
-$execute unless entity @e[type=creeper,tag=sub_castle_creeper,tag=$(team),distance=1..] run say no creeper left $(team)
+$execute unless entity @e[type=creeper,tag=sub_castle_creeper,tag=$(team),distance=1..] run function cp2:type/work/couple/extend/random {team:"$(team)"}
 #已有情侶 : 抽小三 2nd
 $execute if entity @a[team=$(team),tag=couple1] if entity @a[team=$(team),tag=couple2] unless entity @a[team=$(team),tag=small3] run function cp2:type/work/couple/small3 {team:"$(team)"}
 #還沒有情侶 1st
