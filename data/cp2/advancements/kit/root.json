@@ -1,0 +1,19 @@
+{
+  "display": {
+    "icon": {
+      "item": "minecraft:iron_sword"
+    },
+    "title": "§a§l目前職業",
+    "description": "§f用來查看你當前的職業",
+    "background": "textures/block/gray_concrete.png",
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": false,
+    "hidden": false
+  },
+  "criteria": {
+    "root": {
+      "trigger": "minecraft:tick"
+    }
+  }
+}
